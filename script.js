@@ -6,11 +6,6 @@ function press(value) {
 }
 
 function calculate() {
-  
-  if (expression.includes("/0")) {
-      throw "Divide by zero";
-    }
-    
   try {
     let result = eval(expression);
     document.getElementById("result").innerText = result;
