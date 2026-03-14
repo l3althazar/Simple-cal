@@ -6,6 +6,11 @@ function press(value) {
 }
 
 function calculate() {
+  
+  if (expression.includes("/0")) {
+      throw "Divide by zero";
+    }
+    
   try {
     let result = eval(expression);
     document.getElementById("result").innerText = result;
@@ -19,6 +24,3 @@ function clearAll() {
   document.getElementById("process").innerText = "";
   document.getElementById("result").innerText = "0";
 }
-  if (expression.includes("/0")){
-    throw "Divide by zero";
-  }
